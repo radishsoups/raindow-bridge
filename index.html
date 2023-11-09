@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+
+<head>
+  <!-- load in the p5 core library -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
+
+  <!-- your custom sketch code -->
+  <script src="sketch.js"></script>
+
+  <!-- custom CSS styles for this page -->
+  <style>
+    h1 {
+      font-size: 3.3em;
+      letter-spacing: 0.3em;
+      text-transform: lowercase;
+      font-family: 'VT323', monospace;
+      text-align: center;
+      padding-top: 1em;
+    }
+
+    p {
+      font-family: 'VT323', monospace;
+      margin: 1em;
+    }
+
+    #container {
+      margin: auto;
+      text-align: center;
+    }
+
+    body {
+      background-image: url('images/bg2.png');
+      background-repeat: repeat-y;
+      height: 100%;
+      /* overflow: hidden; */
+    }
+
+    html {
+      height: 100%;
+    }
+
+    #main {
+      padding-top: 0;
+      vertical-align: top;
+      background: white;
+      width: 80%;
+      margin: auto;
+    }
+
+    #box,
+    #house,
+    #pond {
+      width: 10%;
+      height: 100%;
+      margin-right: 1em;
+    }
+
+    #pond {
+      margin-left: 1em;
+    }
+
+    #anchovy {
+      width: 8%;
+      height: 100%;
+      margin-right: 1em;
+    }
+
+    #hints {
+      display: column;
+      align-self: center;
+      justify-content: center;
+    }
+
+    #browser {
+      text-align: center;
+    }
+
+    #text {
+      display: flex;
+      flex-direction: row;
+      margin-left: 15em;
+      margin-right: 5em;
+    }
+
+    #text>p {
+      margin-top: 2em;
+    }
+
+    .divide {
+      margin-top: 2em;
+      width: 55%;
+      color: lightgrey;
+    }
+  </style>
+
+  <script>
+    // disabling user scrolling with arrow keys
+    // source code: https://stackoverflow.com/questions/8916620/disable-arrow-key-scrolling-in-users-browser
+    window.addEventListener("keydown", function (e) {
+      if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1) {
+        e.preventDefault();
+      }
+    }, false);
+  </script>
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=VT323&display=swap" rel="stylesheet">
+
+  <!-- load in the p5 sound library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.js"></script>
+
+  <!-- adding additional classes for organization -->
+  <script src="sprite.js"></script>
+  <script src="collection.js"></script>
+  <script src="cat.js"></script>
+  <script src="critter.js"></script>
+  <script src="box.js"></script>
+  <script src="particle.js"></script>
+
+</head>
+
+<body>
+  <div id="main">
+    <h1>Rainbow Bridge</h1>
+    <div id="container" class="container"></div>
+    <p id="browser">Please enjoy on Google Chrome or Firefox only</p>
+    <hr class="divide">
+    <div id="text">
+      <p>Based on the <a href="https://www.rainbowsbridge.com/Poem.htm">poem</a> written by artist Edna Clyne-Rekhy,
+        Rainbow Bridge is a walking simulator that explores pet
+        loss and grief.<br><br>Run around your landscape, enjoy the ambience, and play minigames to collect keys. With
+        each
+        collected
+        key, you are one step closer to the Rainbow Bridge.</p>
+      <div id="hints">
+        <p>Hint: look for the objects below</p>
+        <img id="pond" class="center" src="images/pond.png" alt="pixel art of pond">
+        <img id="box" class="center" src="images/find/box.png" alt="pixel art of box">
+        <img id="anchovy" class="center" src="images/find/anchovy.png" alt="pixel art of anchovy">
+        <img id="house" class="center" src="images/roundup/house.png" alt="pixel art of a house">
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
