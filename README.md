@@ -1,0 +1,10 @@
+# Rainbow Bridge
+
+## Concept
+This project is inspired by Edna Clyne-Rekhy's 'Rainbow Bridge' poem, which states that there is a side of heaven—called Rainbow Bridge—dedicated to pets. When your pet passes, they cross the bridge, where they will live until you join them. Based on this theme, I created an interactive walking simulator with multiple minigames embedded within the canvas. There is a white cat, controlled by the user, that lives in the meadows of the Rainbow Bridge while it waits for its special friend to arrive. When the user completes the game, they can reunite the cat with its friend.
+
+## Gameplay & Techniques
+While the cat waits for its friend, the user can play four minigames. The first one is a fishing simulator, where the user has to catch a unique fish and drag it into their chest using their mouse. The second minigame uses a particle system, where the user can collect the dust particles with their mouse. The third is a 'hide-and-seek' type game, where the user can use their arrow keys to interact with different boxes and search for the hidden item. The fourth minigame is a round-up game, and the user can herd different cats into their home using their mouse. 
+Upon completing each minigame, the user obtains a key. There are four total keys to collect. Once all of them are collected, the words from the poem are displayed across the screen as the cat crosses the Rainbow Bridge. Then, when the poem is finished, the cat finally meets their friend at the end of the bridge, and the game finishes.
+
+All minigames were implemented using classes, conditional statements, loops, and arrays with images loaded in each element. The code for all the minigames is wrapped inside states, and when the user interacts with the minigame marker on the map, the game triggers the minigame by switching states. Functions were used to check if keys were pressed or if the mouse was clicked. States were also used to provide instructions, indicate minigame completion, transition from one display to another, and show the game ending. Sprite sheets were also used to animate a few features, using an updated version of an example from the class code.
